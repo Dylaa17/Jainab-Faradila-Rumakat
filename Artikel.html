@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel</title>
+    <link rel="stylesheet" href="testes.css"> 
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #4d6b99;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 { text-align: center; margin-bottom: 30px; }
+    .artikel-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .artikel-card {
+      background: black;
+      border-radius: 8px;
+      box-shadow: black;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .artikel-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .content {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .content h3 { margin: 0 0 10px; font-size: 1.1rem; }
+    .content p { flex: 1; font-size: 0.95rem; line-height: 1.4; margin: 0 0 10px; }
+    .content a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .content a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+     <div class="container">
+            <div class="header">
+            <h1 class="logo" style="text-align: center;">WELCOME TO MY WEBSITE</h1>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Profil.html">PROFILE</a></li>
+                    <li><a href="Galeri.html">GALLERY</a></li>
+                    <li><a href="Artikel.html">ARTICLES</a></li>
+                    <li><a href="Tentang.html">ABOUT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="artikel" class="artikel">
+            <h2 style="text-align: center;">ARTICLES</h2>
+            <center>
+            <p>Artikel terbaru akan ditampilkan di sini:</p>
+            </center>
+            <br>
+            <br>
+            <div class="artikel-card">
+                <div class="artikel-wrapper">
+
+     <div class="artikel-card">
+        <img src="gambar artikel.avif" alt="UI Peringatkan Devisa Kabur">
+        <div class="content">
+          <h3>Kampus Berdampak Menjadi Pusat Inovasi, Transformasi Sosial, dan Peradaban</h3>
+          <p>Rektor UNJ menekankan bahwa “kampus berdampak ialah kampus yang hadir dan mengakar dalam realitas masyarakatnya… bukan menara gading, melainkan mercusuar harapan</p>
+          <a href="https://mediaindonesia.com/opini/771150/kampus-berdampak-menjadi-pusat-inovasi-transformasi-sosial-dan-peradaban" target="_blank">Baca selengkapnya →</a>
+        </div>
+      </div>
+
+      <div class="artikel-card">
+        <img src="gambar artikel2.avif" alt="Western Sydney Surabaya">
+        <div class="content">
+          <h3>Kampus Berdampak, USK Gelar Pameran dan Lomba Poster Pembelajaran Untuk Mahasiswa</h3>
+          <p>Peluncuran Edubot, platform AI berbasis kurikulum yang mendukung guru dan mahasiswa: “Edubot dirancang untuk menghubungkan pertanyaan siswa ke konten berkualitas dan terpercaya” </p>
+          <a href="https://mediaindonesia.com/humaniora/768527/kampus-berdampak-usk-gelar-pameran-dan-lomba-poster-pembelajaran-untuk-mahasiswa" target="_blank">Baca selengkapnya →</a>
+        </div>
+      </div>
+
+     <div class="artikel-card">
+        <img src="gambar artikel3.avif" alt="Kampus Asing Lain">
+        <div class="content">
+          <h3>Kampus Berdampak Perlu Jawab Kebutuhan Zaman dengan Aksi Konkret</h3>
+          <p>Binus University menyatakan pentingnya aksi nyata sebagai bagian dari kampus berdampak: “kampus global berdampak yang menjawab kebutuhan zaman melalui aksi konkret”</p>
+          <a href="https://mediaindonesia.com/humaniora/771993/kampus-berdampak-perlu-jawab-kebutuhan-zaman-dengan-aksi-konkret" target="_blank">Baca selengkapnya →</a>
+        </div>
+      </div>
+
+      <div class="artikel-card">
+        <img src="gambar artikel4.webp" alt="Al-Azhar & Jordan University">
+        <div class="content">
+          <h3>Kampus Berdampak, Saatnya Perguruan Tinggi Mencetak Peradaban</h3>
+          <p>Opini oleh Guru Besar Universitas Telkom menyoroti peran kurikulum, kolaborasi, riset, dan karakter dalam membentuk “peradaban</p>
+          <a href="https://adv.kompas.id/baca/kampus-berdampak-saatnya-perguruan-tinggi-mencetak-peradaban" target="_blank">Baca selengkapnya →</a>
+        </div>
+      </div>
+
+      <div class="artikel-card">
+        <img src="gambar artikell1.webp" alt="Kampus Internasional Jakarta">
+        <div class="content">
+          <h3>Selamat Datang 'Kampus Berdampak'</h3>
+          <p>Mengupas program baru yang mereformasi peran akademik: “Kampus diharapkan tak sekadar hadir sebagai menara gading akademik… kurikulum link and match dengan masalah masyarakat” </p>
+          <a href="https://www.antaranews.com/berita/4808133/selamat-datang-kampus-berdampak" target="_blank">Baca selengkapnya →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

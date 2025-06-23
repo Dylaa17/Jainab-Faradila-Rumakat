@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galeri</title>
+    <link rel="stylesheet" href="testes.css"> 
+     <style>  
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #333;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            background: rgba(255, 255, 255, 0.9);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.1);
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+
+        .image-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .galeri-container {
+            background-color: #4d6b99;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 1400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .galeri-container h3 {
+            color:#4d6b99;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #4d6b99;
+        }
+
+        .galeri-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .clickable-image {
+            width: 220px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #f0f0f0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .clickable-image:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            border-color: #4d6b99;
+        }
+
+        .galeri-title {
+            color: #4d6b99;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 40px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient black;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+            <div class="header">
+            <h1 class="logo" style="text-align: center;">WELCOME TO MY WEBSITE</h1>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Profil.html">PROFILE</a></li>
+                    <li><a href="Galeri.html">GALLERY</a></li>
+                    <li><a href="Artikel.html">ARTICLES</a></li>
+                    <li><a href="Tentang.html">ABOUT</a></li>
+                </ul>
+            </div>
+        </div>
+
+    <h2 class="galeri-title">GALLERY</h2>
+
+    <div class="galeri-container">
+        <div class="galeri-grid">
+            <img src="dila.jpg" class="clickable-image" onclick="openModal('dila.jpg')">
+            <img src="foto dila1.jpg" class="clickable-image" onclick="openModal('foto dila1.jpg')">
+            <img src="foto dila2.jpg" class="clickable-image" onclick="openModal('foto dila2.jpg')">
+            <img src="foto dila3.jpg" class="clickable-image" onclick="openModal('foto dila3.jpg')">
+            <img src="foo dila 4.jpg" class="clickable-image" onclick="openModal('foo dila 4.jpg')">
+            <img src="foto keluarga1.jpg" class="clickable-image" onclick="openModal('foto keluarga1.jpg')">
+            <img src="foto keluarga2.jpg" class="clickable-image" onclick="openModal('foto keluarga2.jpg')">
+            <img src="foto keluarga3.jpg" class="clickable-image" onclick="openModal('foto keluarga3.jpg')">
+            <img src="foto keluarga1.jpg" class="clickable-image" onclick="openModal('foto keluarga1.jpg')">
+            <img src="foto keluarga2.jpg" class="clickable-image" onclick="openModal('foto keluarga2.jpg')">
+            <img src="tmn 1.jpg" class="clickable-image" onclick="openModal('tmn 1.jpg')">
+            <img src="tmn2.jpg" class="clickable-image" onclick="openModal('tmn2.jpg')">
+            <img src="tmn3.jpg" class="clickable-image" onclick="openModal('tmn3.jpg')">
+            <img src="tmn4.jpg" class="clickable-image" onclick="openModal('tmn4.jpg')">
+            <img src="tmn5.jpg" class="clickable-image" onclick="openModal('')">
+            <img src="bebas 1.jpg" class="clickable-image" onclick="openModal('bebas 1.jpg')">
+            <img src="bebas3.jpg" class="clickable-image" onclick="openModal('bebas3.jpg')">
+            <img src="bebas4.jpg" class="clickable-image" onclick="openModal('bebas4.jpg')">
+            <img src="bebas5.jpg" class="clickable-image" onclick="openModal('bebas5.jpg')">
+            <img src="bebas6.jpg" class="clickable-image" onclick="openModal('bebas6.jpg')">
+            </div>
+            </div>
+
+    
+    <div id="imageModal" class="modal">
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        
+        const imageSources = [
+            'Foto 1.jpg', 'Foto 2.jpg', 'Foto dwiii.jpg', 'Foto 3.jpg', 'foto 4.jpg',
+            'Foto Keluarga 1.jpg', 'foto keluarga 4.jpg', 'foto keluarga 5.jpg', 'Foto Keluarga 3.jpg', 'Foto Keluarga 2.jpg',
+            'Foto teman 1.jpg', 'foto teman 4.jpg', 'foto teman 5.jpg', 'Foto Teman 2.jpg', 'Foto Teman 3.jpg',
+            'foto bebas 1.jpg', 'foto bebas 2.jpg', 'foto bebas 3.jpg', 'foto bebas 4.jpg', 'foto bebas 5.jpg'
+        ];
+        
+        let currentImageIndex = 0;
+
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            
+            currentImageIndex = imageSources.indexOf(imageSrc);
+            modalImg.src = imageSrc;
+            modal.style.display = 'block';
+        }
+
+        document.getElementById('imageModal').onclick = function(e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+</head>
+<body>
+
+   
